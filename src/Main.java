@@ -3,7 +3,7 @@ public class Main {
     public static void main(String[] args) {
 
         Author dostoevsky = new Author("Фёдор ", "Достоевский");
-        Book prestuplenie = new Book("Преступление и наказание", dostoevsky.getAuthorName() + dostoevsky.getAuthorSurname(), 1866);
+        Book prestuplenie = new Book("Преступление и наказание", dostoevsky.getAuthorName().getAuthorSurname(), 1866);
         System.out.println("prestuplenie.bookName = " + prestuplenie.getBookName());
         System.out.println("prestuplenie.bookAuthor = " + prestuplenie.getBookAuthor());
         System.out.println("prestuplenie.bookYear = " + prestuplenie.getBookYear());
