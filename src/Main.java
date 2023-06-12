@@ -3,9 +3,9 @@ public class Main {
     public static void main(String[] args) {
 
         Author dostoevsky = new Author("Фёдор ", "Достоевский");
-        Book prestuplenie = new Book("Преступление и наказание", dostoevsky.getAuthorName().getAuthorSurname(), 1866);
+        Book prestuplenie = new Book("Преступление и наказание", dostoevsky, 1866);
         System.out.println("prestuplenie.bookName = " + prestuplenie.getBookName());
-        System.out.println("prestuplenie.bookAuthor = " + prestuplenie.getBookAuthor());
+        System.out.println("prestuplenie.bookAuthor = " + prestuplenie.getBookAuthor().getAuthorSurname());
         System.out.println("prestuplenie.bookYear = " + prestuplenie.getBookYear());
 
 //        System.out.println("dostoevsky.surname = " + dostoevsky.authorSurname);
@@ -16,18 +16,18 @@ public class Main {
 
         System.out.println();
         Author ostrovsky = new Author("Александр ", "Островский");
-        Book groza = new Book("Гроза", ostrovsky.getAuthorName() + ostrovsky.getAuthorSurname(), 1859);
+        Book groza = new Book("Гроза", ostrovsky, 1859);
         System.out.println("groza.bookName = " + groza.getBookName());
-        System.out.println("groza.bookAuthor = " + groza.getBookAuthor());
+        System.out.println("groza.bookAuthor = " + groza.getBookAuthor().getAuthorSurname());
         System.out.println("groza.bookYear = " + groza.getBookYear());
         groza.setBookYear(1861);
         System.out.println("groza.getBookYear = " + groza.getBookYear());
 
         System.out.println();
         Author turgenev = new Author("Иван ", "Тургенев ");
-        Book mumu = new Book("Муму", turgenev.getAuthorName() + turgenev.getAuthorSurname(), 1852);
+        Book mumu = new Book("Муму", turgenev, 1852);
         System.out.println("mumu.bookName = " + mumu.getBookName());
-        System.out.println("mumu.bookAuthor = " + mumu.getBookAuthor());
+        System.out.println("mumu.bookAuthor = " + mumu.getBookAuthor().getAuthorSurname());
         System.out.println("mumu.bookYear = " + mumu.getBookYear());
 
 
