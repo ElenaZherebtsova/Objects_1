@@ -7,11 +7,27 @@ public class Author {
         this.authorSurname = authorSurname;
     }
 
-    public String  getAuthorName() {
+    public String getAuthorName() {
         return this.authorName;
     }
 
     public String getAuthorSurname() {
         return this.authorSurname;
+    }
+
+
+    public boolean equals (Author other) {
+        if (this.getAuthorName() != other.getAuthorName()) {
+            return false;
+        }
+        Author a2 = (Author) other;
+        return authorName.equals(a2.authorName);
+    }
+
+    public int hashCode() {
+        return java.util.Objects.hash(authorName);
+    }
+        public String toString() {
+        return "Автор " + this.authorName + this.authorSurname;
     }
 }
