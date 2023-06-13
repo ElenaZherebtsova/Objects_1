@@ -25,8 +25,8 @@ public class Main {
 
 
         System.out.println();
-        Author turgenev = new Author("Иван ", "Тургенев ");
-        Book mumu = new Book("Муму", turgenev, 1852);
+        Author turgenev = new Author("Александр ", "Островский ");
+        Book mumu = new Book("Гроза", turgenev, 1859);
         System.out.println(mumu.toStringBook());
         System.out.println( mumu.getBookAuthor());
 //        System.out.println("mumu.bookYear = " + mumu.toStringBook());

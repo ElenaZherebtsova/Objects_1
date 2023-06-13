@@ -30,7 +30,9 @@ public class Book {
     }
 
     public boolean equals (Book other) {
-        if (this.getBookName() != other.getBookName()) {
+        if (this.getBookName() != other.getBookName() &&
+                this.getBookAuthor() != other.getBookAuthor() &&
+                this.bookYear != other.bookYear) {
             return false;
         }
         Book b2 = (Book) other;

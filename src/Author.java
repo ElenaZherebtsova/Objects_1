@@ -17,11 +17,12 @@ public class Author {
 
 
     public boolean equals (Author other) {
-        if (this.getAuthorName() != other.getAuthorName()) {
+        if (this.getAuthorName() != other.getAuthorName() && this.getAuthorSurname() != other.getAuthorSurname()) {
             return false;
         }
         Author a2 = (Author) other;
         return authorName.equals(a2.authorName);
+
     }
 
     public int hashCode() {
