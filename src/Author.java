@@ -15,14 +15,13 @@ public class Author {
         return this.authorSurname;
     }
 
-
-    public boolean equals (Author other) {
-        if (this.getAuthorName() != other.getAuthorName() && this.getAuthorSurname() != other.getAuthorSurname()) {
-            return false;
-        }
-        Author a2 = (Author) other;
-        return authorName.equals(a2.authorName);
-
+    @Override
+    public boolean equals (Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Author author = (Author) o;
+        return Objects.equals(authorName, author.authorName) &&
+                Objects.equals(authorSurName, author.authorSurName);
     }
 
     public int hashCode() {
